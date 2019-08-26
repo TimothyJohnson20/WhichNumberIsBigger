@@ -3,13 +3,14 @@ package com.example.whichnumberisbigger;
 public class BiggerNumberGame {
     private int number1;
     private int number2;
-    private int score = 0;
+    private int score;
     private int lowerLimit;
     private int upperLimit;
 
     public BiggerNumberGame(int lowerLimit, int upperLimit) {
         this.lowerLimit = lowerLimit;
         this.upperLimit = upperLimit;
+        generateRandomNumbers();
     }
     //TODO
     public void generateRandomNumbers(){
@@ -35,6 +36,7 @@ public class BiggerNumberGame {
             return "Congratulations, you're correct!";
         }
         else{
+            score--;
             return "You're an abomination";
         }
     }
