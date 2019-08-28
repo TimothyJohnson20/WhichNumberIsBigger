@@ -30,14 +30,17 @@ public class BiggerNumberGame {
         //  Determine if the answer is right
         //  Update the score accordingly
         //  return relevant message
+        int colorchoice;
         int rightAnswer = Math.max(number1, number2);
         if (answer == rightAnswer){
             score++;
             return "Congratulations, you're correct!";
+            colorchoice = 1;
         }
         else{
             score--;
             return "You're an abomination";
+            colorchoice = 2;
         }
     }
 
